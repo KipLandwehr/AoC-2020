@@ -1,0 +1,21 @@
+diffs           combinations - ( consecutive sets of 3 + sets of 4 + s5 + s6 + ... + sN )        where n = (consec 1s) - 1
+3n1n3                  0
+3n1x1n3                (2**1)
+3n1x1x1n3              (2**2)
+3n1x1x1x1n3            (2**3) - 1
+3n1x1x1x1x1n3          (2**4) - ( 2 + 1 )
+3n1x1x1x1x1x1n3        (2**5) - ( 3 + 2 + 1 )
+3n1x1x1x1x1x1x1n3      (2**6) - ( 4 + 3 + 2 + 1 )
+
+Notation: <diff><num><diff><num><diff>
+        where <num> is n for a number that cannot be removed
+                       x for a number that can optionally be removed
+
+Combinations are powers of 2 and represent the total number of combinations for the numbers that my optionally be removed. We then subtract from the total number of combinations any combinations that include the removal of 3 or more consecutive "x"es.
+
+Resulting in, where n is the number of consecutive diffs equal to 1:
+        if n=1, combinations = 0
+        if n>1, combinations = 2**(n-1) - sum0(0..(n-3))
+
+Note: The .. operator returns a null list if the value on the left is greater than the value on the right.
+      The sum0 function returns 0 if the list provided is empty.
