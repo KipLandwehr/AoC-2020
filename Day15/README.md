@@ -41,7 +41,7 @@ Given your starting numbers, **what will be the 2020th number spoken?**
 
 Your puzzle input is `18,8,0,5,4,1,20`.
 
-Your puzzle answer was 253.
+Your puzzle answer was `253`.
 
 **--- Part Two ---**
 
@@ -56,4 +56,6 @@ Impressed, the Elves issue you a challenge: determine the `30000000`th number sp
     Given `3,1,2`, the `30000000`th number spoken is `362`.
 
 Given your starting numbers, **what will be the `30000000`th number spoken?**
+
+Your puzzle answer was `13710`.
 
